@@ -5,13 +5,11 @@ const session = require("express-session");
 const { AddAdmissionInquiry } = require("./apis/user/addAdmissionInquiry");
 const { GetAdmissionInquiry } = require("./apis/admin/Form/getAdmissioninquiry");
 const { GetContactUs } = require("./apis/admin/Form/getContactUs");
-const { AddNews } = require("./apis/admin/News/AddNews");
 const { AddContactUs } = require("./apis/user/addContactsUs");
 const { newsPicUpload, staffPicUpload, facilityPicUpload, galleryPicUpload, departmentPicUpload, eventPicUpload, activityPicUpload } = require("./multer/multer");
 const { DeleteNews } = require("./apis/admin/News/deleteNews");
 const { GetNews } = require("./apis/user/getNews");
 const { GetStaff } = require("./apis/user/getStaff");
-const { AddStaff } = require("./apis/admin/Staff/addStaff");
 const { DeleteStaff } = require("./apis/admin/Staff/deleteStaff");
 const { AddFacility } = require("./apis/admin/Facilities/addFacility");
 const { DeleteFacility } = require("./apis/admin/Facilities/deleteFacility");
@@ -33,6 +31,8 @@ const Logout = require("./apis/admin/logout");
 const Session = require("./apis/admin/session");
 const { UpdateCredentials } = require("./apis/admin/updateCredentials");
 const { GetCounts } = require("./apis/admin/getCounts");
+const { AddStaff } = require("./apis/admin/Staff/addStaff");
+const { AddNews } = require("./apis/admin/News/addNewsAdmin");
 require('dotenv').config();
 
 //initialize app

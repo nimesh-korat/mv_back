@@ -5,8 +5,8 @@ const session = require("express-session");
 const { AddAdmissionInquiry } = require("./apis/user/addAdmissionInquiry");
 const { GetAdmissionInquiry } = require("./apis/admin/Form/getAdmissioninquiry");
 const { GetContactUs } = require("./apis/admin/Form/getContactUs");
-const { AddContactUs } = require("./apis/user/addContactsUs");
 const { AddNews } = require("./apis/admin/News/AddNews");
+const { AddContactUs } = require("./apis/user/addContactsUs");
 const { newsPicUpload, staffPicUpload, facilityPicUpload, galleryPicUpload, departmentPicUpload, eventPicUpload, activityPicUpload } = require("./multer/multer");
 const { DeleteNews } = require("./apis/admin/News/deleteNews");
 const { GetNews } = require("./apis/user/getNews");
@@ -137,6 +137,6 @@ app.post('/getEvent', GetEvent);
 app.post('/getActivity', GetActivity);
 
 //Activate Server
-app.listen(process.env.PORT ||PORTS, () => {
+app.listen(process.env.PORT || PORTS, () => {
     console.log("Server Started on port: ", PORTS);
 });

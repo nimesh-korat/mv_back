@@ -7,7 +7,7 @@ async function AddAdmissionInquiry(req, res) {
 
         const { childName, childDOB, cClass, address, parentEmail, parentPhone, stream, gender } = req.body;
 
-        if (!childName || !childDOB || !cClass || !address || !parentEmail || !parentPhone || !stream || !gender) {
+        if (!childName || !childDOB || !cClass || !address || !parentEmail || !parentPhone || !gender) {
             return res
                 .status(400)
                 .json({ success: false, message: "Missing required fields!" });
@@ -20,7 +20,7 @@ async function AddAdmissionInquiry(req, res) {
             address,
             parentEmail,
             parentPhone,
-            stream,
+            stream: stream ? stream : null,
             gender,
             timestamp: new Date(),
         });
